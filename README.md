@@ -1,8 +1,10 @@
 # Getting the Fetch call to work with CORS
 ./chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 
+Running the app in this instance of chrome will overcome any CORS issues.
+
 # How to run and build
-While in the directory run npm install and then npm start.
+While in the project directory run npm install and then npm start.
 
 # Data loading and product page
 Have the app fetch product data via HTTP GET request from the following
