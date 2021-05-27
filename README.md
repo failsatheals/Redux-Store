@@ -14,14 +14,14 @@ Replace the placeholder product link in the header with one link for each
 product from the API. Clicking these links will display the product page for
 that product. \
 On the product page, replace the placeholder name, description, image, and
-price with the values from the API \
+price with the values from the API 
 
 # Quantity picker
 Add a quantity picker. It will go below “Quantity”, and above “Add to Cart”. \
 Please implement it as its own React component. \
 The current value will start at 1. Clicking the minus or plus buttons will
 subtract or add 1 to the value, respectively. The value should not go below 1. \
-This value will be used when adding to the cart, as detailed in the next section \
+This value will be used when adding to the cart, as detailed in the next section 
 
 # Cart state
 Clicking the “Add to Cart” button will add the selected quantity of the current
@@ -36,7 +36,7 @@ not need to preserve the cart’s contents when the user refreshes the page or
 navigates away from the site. \
 Clicking an ‘x’ button in the cart will remove that item from the cart
 Clicking the checkout button will display the message “Thank you for your
-purchase!” and clear all the items from the cart. \
+purchase!” and clear all the items from the cart. 
 
 
 
