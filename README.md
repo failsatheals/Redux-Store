@@ -28,6 +28,7 @@ The cart’s contents will persist if navigating to another product page. You do
 Clicking an ‘x’ button in the cart will remove that item from the cart Clicking the checkout button will display the message “Thank you for your purchase!” and clear all the items from the cart. 
 
 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

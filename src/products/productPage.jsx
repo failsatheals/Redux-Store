@@ -1,26 +1,47 @@
 import React from 'react';
 import classes from './productPage.module.scss';
+import Quantity from '../quantity/quantity'
+import PropTypes from 'prop-types';
+import { addToCart } from '../actions'
+import { useDispatch } from 'react-redux'
 
-const ProductPage = () => {
+const ProductPage = (props) => {
+    const dispatch = useDispatch();
+    const addToCarthandler = () => {
+        dispatch(addToCart(
+            props.product.id, props.quantity, props.product.name, props.product.imageUrl, props.product.price
+            ));
+        props.setQuantity(1);
+    }
 
     return (
         <div>
-            <div className={classes.title}>Sample Product</div>
+            <div className={classes.title}>{props.product.name}</div>
             <div className={classes.imageAndDescriptionContainer}>
                 <div className={classes.image}>
-                    <img src="https://via.placeholder.com/300" alt="product"/>
+                    <img src={props.product.imageUrl} alt="product"/>
                 </div>
-                <div className={classes.description}>
-                    This is a sample product. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
+                <div className={classes.description}>{props.product.description}</div>
             </div>
-            <div className={classes.price}>$5.00</div>
-            <div className={classes.quantityText}>Quantity</div>
-            <div className='button'>
+            <div className={classes.price}>{"$"+props.product.price}</div>
+            <Quantity quantity={props.quantity} setQuantity={props.setQuantity}/>
+            <div className='button' onClick={() => addToCarthandler()}>
                 Add to cart
             </div>
         </div>
     );
+}//
+ProductPage.propTypes  = {
+    product: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired
+      })
 }
 
 export default ProductPage;
+
+
+

@@ -4,7 +4,7 @@ import classes from './layout.module.scss';
 
 const Layout = (props) => (
     <div>
-        <Header/>
+        <Header products={props.products} setSelectedProductId={props.setSelectedProductId}/>
         <div className={classes.pageBody}>
             {props.children}
         </div>
