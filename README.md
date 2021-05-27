@@ -1,3 +1,33 @@
+# Getting Started
+## Getting the Fetch call to work with CORS
+./chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+
+## How to run and build
+While in the directory run npm install and then npm start.
+
+# Requirements
+## Data loading and product page
+Have the app fetch product data via HTTP GET request from the following endpoint: \
+https://drive.google.com/uc?export=view&id=13tTE7bKIN2XZ6BGLU3Yr9jNjHSWoA_r9 \
+The product data will be fetched upon each page load. \
+Replace the placeholder product link in the header with one link for each product from the API. Clicking these links will display the product page for that product. \
+On the product page, replace the placeholder name, description, image, and price with the values from the API. 
+
+## Quantity picker
+Add a quantity picker. It will go below “Quantity”, and above “Add to Cart”. \
+Please implement it as its own React component. \
+The current value will start at 1. Clicking the minus or plus buttons will subtract or add 1 to the value, respectively. The value should not go below 1. \
+This value will be used when adding to the cart, as detailed in the next section.
+
+## Cart state
+Clicking the “Add to Cart” button will add the selected quantity of the current product to the cart. \
+The cart panel on the right will be updated to reflect the new contents of the cart. \
+Please use Redux to implement app state. \
+If the “Add to Cart” button is clicked while that product is already in the cart, it will add to the quantity in the cart, and not create another cart item tile. \
+The cart’s contents will persist if navigating to another product page. You do not need to preserve the cart’s contents when the user refreshes the page or navigates away from the site. \
+Clicking an ‘x’ button in the cart will remove that item from the cart Clicking the checkout button will display the message “Thank you for your purchase!” and clear all the items from the cart. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
