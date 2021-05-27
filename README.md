@@ -7,8 +7,7 @@ While in the directory run npm install and then npm start.
 # Data loading and product page
 Have the app fetch product data via HTTP GET request from the following
 endpoint: \
-https://drive.google.com/uc?export=view&id=13tTE7bKIN2XZ6BGLU3Yr9jNjHS
-WoA_r9 \
+https://drive.google.com/uc?export=view&id=13tTE7bKIN2XZ6BGLU3Yr9jNjHSWoA_r9 \
 The product data will be fetched upon each page load. \
 Replace the placeholder product link in the header with one link for each
 product from the API. Clicking these links will display the product page for
